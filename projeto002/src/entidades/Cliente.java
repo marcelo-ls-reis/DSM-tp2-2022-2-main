@@ -18,8 +18,4 @@ public class Cliente extends PessoaFisica {
        this.scoreCredito = scoreCredito;
    }
   
-   public String toString(){
-       return super.toString() + "\nScore: " + getScoreCredito();
-   }
-    
 }

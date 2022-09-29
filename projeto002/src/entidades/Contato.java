@@ -1,25 +1,10 @@
 package entidades;
 
-public class Contato {
+public class Contato{
     private String email;
     private String fixo;
     private String celular;
 
-    public Contato(String celular){
-        setCelular(celular);
-    }
-    
-    public Contato(String email, String fixo, String celular) {
-        this.setLogradouro(logradouro);
-        this.setNome(nome);
-        setNumero(numero);
-        setCep(cep);
-        this.setCidade(cidade);
-        this.setUf(uf);
-        this.setBairro(bairro);
-    }
-
- 
     public String getEmail() {
         return email;
     }
@@ -39,11 +24,17 @@ public class Contato {
         this.celular = celular;
     }
 
-    public String toString(){
-        return super.toString() + "\"celular\":" + "\"" + getCelular() + "\"";
-    }
-    
-  
+    // public String toString(){
+    //     return "{\"celular\":" + "\"" + getCelular() + "\"" + "," +
+    //     "\"Fixo\":" + "\"" + getFixo() + "\"" + "," +
+    //     "\"Email\":" + "\"" + getEmail() + "\"}";
+    // }
 
-    
+    @Override
+    public String toString(){
+        return "{'Celular':'" + getCelular() + 
+               "','Fixo':'" + getFixo() + 
+               "','Email':'" + getEmail()+"'}"; 
+    }    
+
 }

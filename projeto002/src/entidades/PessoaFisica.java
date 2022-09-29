@@ -9,8 +9,10 @@ public class PessoaFisica {
     private Contato contato;
     private LocalDate dataNascimento;
 
-    public  PessoaFisica(String cpf) {
+    public PessoaFisica(String cpf){
         setDocumento(new Documento(cpf));
+        setEndereco(new Endereco(null));
+        setContato(new Contato());
     }
     
     public String getNome() {
@@ -54,8 +56,7 @@ public class PessoaFisica {
         "\"Endereco\"" + ":" + "\"" + getEndereco() + "\"" + "," +
         "\"Contato\"" + ":" + "\"" + getContato() + "\"" + "," +
         "\"Documento\"" + ":" + "\"" + getDocumento() + "\"" + "," +
-        "\"Data de Nascimento\"" + ":" + "\"" + getDataNascimento() + "\"" + "," +
-        "\"Celular\"" + ":" + "\"" + getContato() + "\"}";
+        "\"Data de Nascimento\"" + ":" + "\"" + getDataNascimento() + "\"" + "}";
     }
     
 }
