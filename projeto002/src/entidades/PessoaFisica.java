@@ -8,9 +8,11 @@ public class PessoaFisica {
     private Documento documento;
     private Contato contato;
     private LocalDate dataNascimento;
-    
-    public PessoaFisica(String cpf) {
+
+    public  PessoaFisica(String cpf) {
+        setDocumento(new Documento(cpf));
     }
+    
     public String getNome() {
         return nome;
     }
@@ -45,12 +47,15 @@ public class PessoaFisica {
     public void setDataNascimento(LocalDate dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
-
+    
+    @Override
     public String toString(){
-        return "Nome: " + getNome() + "\nEndereco: " + getEndereco() +
-        "\nContato: " + getContato() +
-        "\nDocumento: " + getDocumento() +
-        "\nData de Nascimento: " + getDataNascimento();
+        return  "{\"Nome\"" + ":" +"\"" + getNome() + "\"" + "," +
+        "\"Endereco\"" + ":" + "\"" + getEndereco() + "\"" + "," +
+        "\"Contato\"" + ":" + "\"" + getContato() + "\"" + "," +
+        "\"Documento\"" + ":" + "\"" + getDocumento() + "\"" + "," +
+        "\"Data de Nascimento\"" + ":" + "\"" + getDataNascimento() + "\"" + "," +
+        "\"Celular\"" + ":" + "\"" + getContato() + "\"}";
     }
     
 }

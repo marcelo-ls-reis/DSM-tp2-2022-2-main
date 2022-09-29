@@ -65,6 +65,8 @@ public class Documento {
 
     @Override
     public String toString(){
-        return "{'CPF':'" + getCpf() + "','RG':'" + getRg() + "','CNH':'" + getCnh()+"'}"; 
+        return "{'CPF':'" + getCpf() + 
+               "','RG':'" + getRg() + 
+               "','CNH':'" + getCnh()+"'}"; 
     }    
 }

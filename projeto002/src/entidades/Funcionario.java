@@ -1,12 +1,17 @@
 package entidades;
 
-import java.time.LocalDate;
+// import java.time.LocalDate;
 
 public class Funcionario extends PessoaFisica {
     
     //  atributos especificos da classe funcionario
     private double salario;
     private String matricula;
+
+    public Funcionario(String cpf) {
+        super (cpf);
+        
+    }
 
     public double getSalario() {
         return salario;
@@ -24,5 +29,7 @@ public class Funcionario extends PessoaFisica {
     public String toString(){
         return super.toString() + "\nMatricula: " + getMatricula() + "\nSalario: " + getSalario();
     }
+
+
     
 }
